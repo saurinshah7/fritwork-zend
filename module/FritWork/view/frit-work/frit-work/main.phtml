@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" href="<?php echo $this->basePath()?>/css/sigma-canvas.css"/>
+        <link rel="shortcut icon" type="image/x-icon" href="<?php echo $this->basePath()?>/img/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="<?php echo $this->basePath()?>/img/favicon.ico" />
+        <title>FritWork</title>
+    </head>
+
+    <body>
+        <img src="<?php echo $this->basePath()?>/img/logo.png" alt="logo" id="logo">
+
+            <div id="button">
+
+                
+                <button id="toggle-layout" >Stop: See Connections</button>
+                <button id="getAll" >Refresh</button>&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                <label for="Action">Action: </label>
+                <select id="action" class="dropdown">
+                    <option value="indi">Zoom To Individual</option>
+                    <option value="panTo">Pan To Within Graph</option>
+                    <option value="add">Add</option>
+                    <option value="delete">Delete</option>
+                    
+                    
+                </select>&nbsp;&nbsp;
+                <label for="Friend">Friend: </label>
+                <select id="friends">
+
+
+                </select>
+                <button id="go" onclick="doAction()" >GO</button>
+                &nbsp;&nbsp;<button id="Picture" onclick="clickPicture()" >Capture Image</button>
+                <a id="log" href="<?php echo $this->logout?>"><img class="imgLogout" src="<?php echo $this->basePath()?>/img/facebook_logout.png" alt="Facebook Logout"></a>
+
+            </div>
+
+            <div id="graph-container"><img style="padding-top: 20%;padding-left: 45%;width: 100px;height: 100px" src="http://www.sanbaldo.com/wordpress/wp-content/bigrotation2.gif" 
+                                           id="img-load" /></div>
+
+
+
+
+
+            <script type="text/javascript" src="https://code.jquery.com/jquery-1.6.4.min.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/lib/src/sigma.core.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/lib/src/conrad.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/lib/src/utils/sigma.utils.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/lib/src/utils/sigma.polyfills.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/lib/src/sigma.settings.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/lib/src/classes/sigma.classes.dispatcher.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/lib/src/classes/sigma.classes.configurable.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/lib/src/classes/sigma.classes.graph.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/lib/src/classes/sigma.classes.camera.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/lib/src/classes/sigma.classes.quad.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/lib/src/captors/sigma.captors.mouse.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/lib/src/captors/sigma.captors.touch.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/lib/src/renderers/sigma.renderers.canvas.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/lib/src/renderers/sigma.renderers.webgl.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/lib/src/renderers/sigma.renderers.def.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/lib/src/renderers/webgl/sigma.webgl.nodes.def.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/lib/src/renderers/webgl/sigma.webgl.nodes.fast.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/lib/src/renderers/webgl/sigma.webgl.edges.def.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/lib/src/renderers/webgl/sigma.webgl.edges.fast.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/lib/src/renderers/webgl/sigma.webgl.edges.arrow.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/lib/src/renderers/canvas/sigma.canvas.labels.def.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/lib/src/renderers/canvas/sigma.canvas.hovers.def.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/lib/src/renderers/canvas/sigma.canvas.nodes.def.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/lib/src/renderers/canvas/sigma.canvas.edges.def.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/lib/src/renderers/canvas/sigma.canvas.edges.arrow.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/lib/src/middlewares/sigma.middlewares.rescale.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/lib/src/middlewares/sigma.middlewares.copy.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/lib/src/misc/sigma.misc.animation.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/lib/src/misc/sigma.misc.bindEvents.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/lib/src/misc/sigma.misc.drawHovers.js"></script>
+            <!-- END SIGMA IMPORTS -->
+            <script src="<?php echo $this->basePath()?>/js/lib/plugins/sigma.layout.forceAtlas2/sigma.layout.forceAtlas2.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/renderer.js"></script>
+            <script src="<?php echo $this->basePath()?>/js/main.js"></script>
+            <footer>Mouse Actions: Zoom in, Zoom out, Drag Map, Click Node, Double Click Node &nbsp; &copy;shahsaurin.com. All Rights Reserved.</footer>
+      </body>
+ <html>

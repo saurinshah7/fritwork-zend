@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+     <meta charset="utf-8">
+        <?php echo $this->headTitle('FritWork') ?>
+
+        <?php echo $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0') ?>
+
+        <!-- Le styles -->
+        <?php
+        echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+                ->appendStylesheet($this->basePath() . '/css/login.css')
+        ?>
+    
+</head>
+<body>
+    <div class="alignCenter">
+        <h2><i>Welcome!</i></h2>
+        <p>Please login to view your Fritwork</p>
+        <a href="<?php echo $this->login?>"><img class="imgLogin" src="<?php $this->basePath()?>/img/fb_login.jpg" alt="Facebook Login" /></a>
+    </div>
+</body>
+</html>

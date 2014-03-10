@@ -1,0 +1,280 @@
+
+/* resets */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+ 
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+                      /* site specific style */
+
+body {
+  background-color: #222;
+}
+
+ body {
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+            
+button {
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+#logo {
+  height: 40px;
+  margin-top: 6px;
+  margin-left: 16px;
+  position: absolute;
+}
+#button {
+  position: relative;
+  margin-left: 170px;
+  color: #fff;
+  font: 12px;
+  font-weight: 500;
+  font-family: arial, Helvetica, sans-serif;
+}
+
+#toggle-layout {
+  font-weight: bolder;
+  margin-left: 10px;
+  width:200px;
+  text-align: center;
+}
+
+#getAll {
+font-weight: bolder;
+}
+
+#Picture {
+  font-weight: bolder;
+}
+
+#toggle-layout, #getAll, #Picture, #go {
+  background-color:#599bb3;
+  -moz-border-radius:28px;
+  -webkit-border-radius:28px;
+  border-radius:28px;
+  border:1px solid #29668f;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:arial;
+  font-size:14px;
+  font-weight:bold;
+  padding:6px 11px;
+  text-decoration:none;
+  text-shadow:0px 1px 2px #3d768a;
+}
+
+#toggle-layout:hover, #getAll:hover, #Picture:hover, #go:hover {
+  background-color:#408c99;
+}
+#toggle-layout:active, #getAll:active, #Picture:active, #go:active {
+  position:relative;
+  top:1px;
+}
+
+.imgLogout {
+  float: right;
+  margin: 10px;
+}
+
+label {
+  font-size: 18px;
+}
+
+#action{
+    width:165px
+}
+
+/*style for the action dropdown bar */
+
+#friends,
+#friends div,
+#friends li,
+#friends div::after,
+#friends .carat,
+#friends .carat:after,
+#friends .selected::after,
+#friends:after
+.dropdown,
+.dropdown div,
+.dropdown li,
+.dropdown div::after,
+.dropdown .carat,
+.dropdown .carat:after,
+.dropdown .selected::after,
+.dropdown:after{
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -ms-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+/* Wrapper */
+
+.dropdown, #friends{
+  position: relative;
+  width: 150px;
+  cursor: pointer;
+  font-weight: 200;
+  background: #599bb3;
+  padding: 8px 0px 8px;
+  
+  border-radius: 5px;
+  
+  color:  #fff;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.dropdown.open #friends.open{
+  z-index: 2;
+}
+
+#friends:hover,
+#friends.focus,
+.dropdown:hover,
+.dropdown.focus{
+  background: #408C99;
+}
+
+
+#friends select,
+.dropdown select{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+#friends.touch select,
+.dropdown.touch select{
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+/* Selected feedback item */ 
+
+#friends .selected, 
+.dropdown .selected {
+    color: #FFF;
+}
+
+#friends .selected,
+#friends ,
+.dropdown .selected,
+.dropdown {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1; 
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#friends .selected::after,
+.dropdown .selected::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  border-radius: 0 5px 5px 0;
+  box-shadow: inset -55px 0 25px -20px #599bb3;
+}
+
+#friends:hover .selected::after,
+#friends.focus .selected::after,
+.dropdown:hover .selected::after,
+.dropdown.focus .selected::after{
+  box-shadow: inset -55px 0 25px -20px #408C99;
+}
+
+footer {
+  text-align:center;
+  
+  font-size:13px;
+  margin: 0 0 0 0;
+  border-top:1px dashed #b1b1b1;
+  color: #fff;
+  /* This is a temporary added height. Remove when graph div is applied. */
+  margin-top: 10px;
+}
+
+#graph-container {
+                top: 5px;
+                bottom: auto;
+                width: 100%;
+                height: 90%;
+                left: 0;
+                right: 0;
+                position: relative;
+                color: #222;
+            }
